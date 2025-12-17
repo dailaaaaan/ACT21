@@ -1,8 +1,10 @@
-* {
+* 
+{
   box-sizing: border-box;
 }
 
-body {
+body 
+{
   margin: 0;
   font-family: Arial, sans-serif;
   background: #eef6f6;
@@ -10,7 +12,8 @@ body {
   line-height: 1.4;
 }
 
-.container {
+.container 
+{
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
@@ -19,21 +22,25 @@ body {
   border-radius: 10px;
 }
 
-h1 {
+h1 
+{
   margin: 0 0 16px;
   font-size: 24px;
   text-align: center;
   color: #0d9488;
 }
 
-#formulario-tareas {
+/*Modifico la part dels forms*/
+#formulario-tareas 
+{
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
   justify-content: center;
 }
 
-#formulario-tareas input {
+#formulario-tareas input 
+{
   width: 100%;
   max-width: 320px;
   padding: 10px 12px;
@@ -42,12 +49,14 @@ h1 {
   font-size: 14px;
 }
 
-#formulario-tareas input:focus {
+#formulario-tareas input:focus 
+{
   outline: 2px solid #0d9488;
   border-color: #0d9488;
 }
 
-#formulario-tareas button {
+#formulario-tareas button 
+{
   padding: 10px 14px;
   border: none;
   border-radius: 8px;
@@ -57,17 +66,20 @@ h1 {
   cursor: pointer;
 }
 
-#formulario-tareas button:hover {
+#formulario-tareas button:hover 
+{
   background: #0f766e;
 }
 
-#borrar-tareas {
+#borrar-tareas 
+{
   display: flex;
   justify-content: center;
   margin-bottom: 16px;
 }
 
-#borrar-tareas button {
+#borrar-tareas button 
+{
   padding: 8px 14px;
   border: 1px solid #0d9488;
   border-radius: 8px;
@@ -77,6 +89,58 @@ h1 {
   cursor: pointer;
 }
 
-#borrar-tareas button:hover {
+#borrar-tareas button:hover
+{
   background: #dff3f1;
+}
+
+/*Aspecte de la llista de tasques*/
+#lista-tareas 
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#lista-tareas li 
+{
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border: 1px solid #cfe8e8;
+  border-radius: 8px;
+  background: #f6fbfb;
+}
+
+#lista-tareas li:hover 
+{
+  background: #e6f7f6;
+}
+
+/* Aquí poso el referent al responsive que es demana a assignació de rols i responsabilitats */
+@media (max-width: 480px) 
+{
+  .container {
+    margin: 20px 12px;
+    padding: 16px;
+  }
+
+  #formulario-tareas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #formulario-tareas input {
+    max-width: none;
+  }
+
+  #formulario-tareas button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) 
+{
+  .container {
+    max-width: 720px;
+  }
 }
