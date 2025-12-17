@@ -37,3 +37,10 @@ formularioBorrar.addEventListener('submit', (e) => {
         alert("No hay más tareas para borrar.");
     }
 });
+
+// Esto permite borrar una tarea especifica al tocarla
+listaTareas.addEventListener('click', (e) => {
+    if (e.target.tagName === 'LI') {
+        e.target.remove();
+    }
+});
